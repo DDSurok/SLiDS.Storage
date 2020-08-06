@@ -12,11 +12,7 @@ SLiDS can be used for quick access to data. Data can be placed in an SQL databas
     <RepositoryUrl>https://github.com/DDSurok/SLiDS.Storage</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>database db databases storage storages repository repo repositories simple</PackageTags>
-<<<<<<< HEAD
     <PackageId>SLiDS.Storage</PackageId>
-=======
-    <PackageId>SLiDS.Storage.DDSurok</PackageId>
->>>>>>> ae80cf65c2e67d00099e727469bb9affe5dbff27
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
