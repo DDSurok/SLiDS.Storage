@@ -11,30 +11,32 @@ SLiDS can be used for quick access to data. Data can be placed in an SQL databas
 
 ## Interfaces
 
-* Main
-** IRepository (IAsyncRepository) - Generic interface for the repository with the most common methods
-** IDbRepository (IAsyncDbRepository) - Generic interface for the repository for placing data in a database, inherited from IRepository (IAsyncRepository)
-** ICachadRepository - Generic interface for the repository for caching in-memory data from a database, inherited from IRepository
-* Common
-** IObject - Generic interface for an object stored in the repository
-** IDbObject - Generic interface for an object stored in the database repository, inherited IObject
-** ICriteria - Main interface for describing conditions for selecting objects in the database
+#### Main
+* IRepository (IAsyncRepository) - Generic interface for the repository with the most common methods
+* IDbRepository (IAsyncDbRepository) - Generic interface for the repository for placing data in a database, inherited from IRepository (IAsyncRepository)
+* ICachadRepository - Generic interface for the repository for caching in-memory data from a database, inherited from IRepository
+#### Common
+* IObject - Generic interface for an object stored in the repository
+* IDbObject - Generic interface for an object stored in the database repository, inherited IObject
+* ICriteria - Main interface for describing conditions for selecting objects in the database
 
 ## Enums
 
 * ColumnType - Enums of the available data types for defining the mapping of object properties to database columns
 
-## IRepository/IAsyncRepository (and inherited interfaces) implementation
+## Implementations
+
+#### IRepository/IAsyncRepository (and inherited interfaces) implementations
 
 * MemoryContext - ... TODO
 * DbContext - ... TODO
 * CachedDbContext - ... TODO
 
-## IObject & IDbObject implementation
+#### IObject & IDbObject implementations
 
 The description of the implementations for the interfaces you want to place classes stored in the entity data model
 
-## ICriteria implimentation
+#### ICriteria implimentations
 
 * EmptyCriteria - Implimentation is empty criteria. The SQL WHERE-expression inserted expression "1 = 1". Simple access is performed as follows: var criteria = ICriteria.Empty
 * OrCriteria - ... TODO
