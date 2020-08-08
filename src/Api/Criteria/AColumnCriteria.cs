@@ -13,6 +13,8 @@ namespace SLiDS.Storage.Api.Criteria
                  : type == typeof(string) ? SqlDbType.NVarChar
                  : type == typeof(DateTime) ? SqlDbType.DateTime
                  : type == typeof(Guid) ? SqlDbType.UniqueIdentifier
+                 : type == typeof(float) ? SqlDbType.Real
+                 : type == typeof(double) ? SqlDbType.Float
                  : throw new NotSupportedException($"Неподдерживаемый тип {type.FullName}.");
         }
         public abstract FormatedCriteria Format(int paramNumber);

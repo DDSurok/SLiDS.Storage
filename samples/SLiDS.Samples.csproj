@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SLiDS.Storage" Version="0.1.1" />
+    <ProjectReference Include="..\src\SLiDS.Storage.csproj" />
   </ItemGroup>
 
 </Project>

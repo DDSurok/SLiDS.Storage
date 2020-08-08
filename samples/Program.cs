@@ -17,6 +17,12 @@ namespace SLiDS.Samples
             Console.WriteLine();
             Console.WriteLine("CriteriaSamples.EqCriteriaSample();");
             CriteriaSamples.EqCriteriaSample();
+            Console.WriteLine();
+            Console.WriteLine("CriteriaSamples.LtCriteriaSample();");
+            CriteriaSamples.LtCriteriaSample();
+            Console.WriteLine();
+            Console.WriteLine("CriteriaSamples.GtCriteriaSample();");
+            CriteriaSamples.GtCriteriaSample();
             Console.ReadKey(false);
         }
     }

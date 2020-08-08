@@ -37,5 +37,23 @@ namespace SLiDS.Samples
             Console.WriteLine($"Parameter [ Name: \"{fCr.Params[0].ParameterName}\", Type: {fCr.Params[0].DbType}, Value: {fCr.Params[0].Value} ]");
             // Parameter [ Name: "p0", Type: String, Value: "Jhon Smith" ]
         }
+        public static void LtCriteriaSample()
+        {
+            ICriteria cr = new LtCriteria<float>("sale", (float) 0.5);
+            FormatedCriteria fCr = cr.Format(0);
+            Console.WriteLine(fCr.Query);             // "sale < @p0"
+            Console.WriteLine(fCr.Params.Length);     // "1"
+            Console.WriteLine($"Parameter [ Name: \"{fCr.Params[0].ParameterName}\", Type: {fCr.Params[0].DbType}, Value: {fCr.Params[0].Value} ]");
+            // Parameter [ Name: "p0", Type: Single, Value: 0,5 ]
+        }
+        public static void GtCriteriaSample()
+        {
+            ICriteria cr = new GtCriteria<float>("sale", 0.5f);
+            FormatedCriteria fCr = cr.Format(0);
+            Console.WriteLine(fCr.Query);             // "sale > @p0"
+            Console.WriteLine(fCr.Params.Length);     // "1"
+            Console.WriteLine($"Parameter [ Name: \"{fCr.Params[0].ParameterName}\", Type: {fCr.Params[0].DbType}, Value: {fCr.Params[0].Value} ]");
+            // Parameter [ Name: "p0", Type: Single, Value: 0,5 ]
+        }
     }
 }
