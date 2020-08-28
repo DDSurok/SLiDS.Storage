@@ -1,12 +1,10 @@
 ﻿using SLiDS.Storage.Api;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace SLiDS.Samples.ObjectSamples
 {
-    class DbObject : IDbObject<int>
+    internal class DbObject : IDbObject<int>
     {
         public string TableName => "t_temp";
         public string TableSchema => "dbo";

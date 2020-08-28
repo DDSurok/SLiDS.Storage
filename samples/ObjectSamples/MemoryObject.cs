@@ -3,9 +3,9 @@ using System;
 
 namespace SLiDS.Samples.ObjectSamples
 {
-    class MemoryObject : IObject<int>
+    internal class MemoryObject : IObject<Guid>
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Data { get; set; }
         public DateTime Created { get; set; }
     }
