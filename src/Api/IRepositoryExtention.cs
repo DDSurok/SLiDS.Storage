@@ -1,10 +1,9 @@
-﻿using SLiDS.Storage.Api;
-using SLiDS.Storage.Api.Criteria.SqlClient;
+﻿using SLiDS.Storage.Api.Criteria.SqlClient;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Information.Web.Domain.Api
+namespace SLiDS.Storage.Api
 {
     public static class IRepositoryExtention
     {

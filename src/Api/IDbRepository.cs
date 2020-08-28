@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace SLiDS.Storage.Api
 {
-    public interface IDbRepository<TData, TId> : IRepository<TData, TId> where TData : IObject<TId>, IDbObject<TId>
+    public interface IDbRepository<TData, TId> : IRepository<TData, TId> where TData : IDbObject<TId>
     {
         string ConnectionString { get; }
         DbTransaction BeginTransaction(IsolationLevel isolationLevel = IsolationLevel.Serializable);
@@ -15,7 +15,7 @@ namespace SLiDS.Storage.Api
         void Delete(TId id, DbTransaction transaction);
     }
 
-    public interface IAsyncDbRepository<TData, TId> : IAsyncRepository<TData, TId> where TData : IObject<TId>, IDbObject<TId>
+    public interface IAsyncDbRepository<TData, TId> : IAsyncRepository<TData, TId> where TData : IDbObject<TId>
     {
         string ConnectionString { get; }
         Task<DbTransaction> BeginTransactionAsync(IsolationLevel isolationLevel = IsolationLevel.Serializable);

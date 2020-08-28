@@ -5,7 +5,6 @@ namespace SLiDS.Storage.Api
     public interface IObject<TId>
     {
         TId Id { get; set; }
-        ColumnInfo IdInfo { get; }
     }
 
     public interface IDbObject<TId> : IObject<TId>
@@ -14,5 +13,6 @@ namespace SLiDS.Storage.Api
         string TableSchema { get; }
         IEnumerable<string> TableScripts { get; }
         IEnumerable<ColumnInfo> Columns { get; }
+        ColumnInfo IdInfo { get; }
     }
 }
